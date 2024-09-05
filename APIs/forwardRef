@@ -1,1 +1,9 @@
+* fowardRef
+- forwardRef lets your component exzpose a DOM node to parent component with a 'ref'.
+부모 컴포넌트에서 자식 컴포넌트 안의 DOM Element 에 접근하고 싶을때 사용
+
+함수형 컴포넌트는 인스턴스가 없기 때문에 ref 속성을 사용할 수 없다.
+따라서, 함수형 컴포넌트를 forwardRef로 감싸주게 되면 ref를 사용할 수 있다.
+
+useRef는 DOM Element 에 접근하기 위해 사용하는 hook이다.
 
