@@ -25,3 +25,36 @@ function Form() {
     </form>
   );
 }
+
+
+typescript 에서 forwardRef 사용예시
+* 부모 컴포넌트 : Parent.tsx
+
+const Parent =()=>{
+	const inputRef= useRef<HTMLInputElement>(null);
+  //....
+  
+  return(
+  //...
+    <MyInput ref={inputRef}/>
+  )
+}
+
+
+* 자식 컴포넌트 : MyInput.tsx
+import React from 'react'
+
+// forwardRef 함수에 제네릭으로 ref와 props의 타입을 명시
+// ref type :HTMLInputElement 
+// props  type :React.InputHTMLAttributes<HTMLInputElement>
+const MyInput = React.forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>(
+  (props, ref) => {
+    // input 요소에 ref와 props를 적용하여 반환
+    return <input ref={ref} {...props} />
+  }
+)
+
+
+
+
+
