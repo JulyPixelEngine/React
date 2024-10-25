@@ -1,0 +1,13 @@
+What is useFormContext?
+
+FormProvider는 React Hook Form 에서 제공하는 컴포넌트
+FormProvider는 상위 컴포넌트에서 하위 컴포넌트로 폼 데이터와 관련된 상태와 로직을 전달하기 위해 사용됨
+
+useFormContext 를 사용하면 컨텍스트를 prop으로 전달하는 것이 불편한
+깊은 중첩 구조에서도 컨텍스트에 접근할 수 있음
+
+@@ prop drilling
+* 하위 컴포넌트로 계속하여 데이터를 넘겨주기 위하여 컴포넌트들을 뚫고 들어가는 개념
+* 일반적인 단계는 문제가 없지만, 10도 넘는 컴포넌트가 있다고 한다면 추척하는데 힘들어지게 됨
+해결법 : Redux Mobox Jotai Recoil
+
